@@ -83,7 +83,7 @@ namespace SistemaVendas.Models
 
             if (Id != null)
             {
-                sql = $"UPDATE PRODUTO SET NOME='{Nome}', DESCRICAO='{Descricao}', PRECO_UNITARIO='{Preco_Unitario}', QUANTIDADE_ESTOQUE='{Quantidade_Estoque}', UNIDADE_MEDIDA='{Unidade_Medida}',LINK_FOTO='{Link_Foto}' WHERE id = '{Id}'";
+                sql = $"UPDATE PRODUTO SET NOME='{Nome}', DESCRICAO='{Descricao}', PRECO_UNITARIO='{Preco_Unitario.ToString().Replace(",", ".")}', QUANTIDADE_ESTOQUE='{Quantidade_Estoque}', UNIDADE_MEDIDA='{Unidade_Medida}',LINK_FOTO='{Link_Foto}' WHERE id = '{Id}'";
             }
             else
             {
